@@ -94,7 +94,7 @@ function eventCheck()
 }
 function makeTri()
 {
-  fill(200,0,0)
+  fill(157,190,185)
   beginShape(TRIANGLES);
   vertex(p1X,p1Y);
   vertex(p2X,p2Y);
@@ -157,7 +157,7 @@ function reset()
 function draw() 
 {
   
-  background(250,150,150); 
+  background(255,194,180); 
   
   
   TPFake1.x = p1X;
@@ -177,7 +177,7 @@ function draw()
   stroke(20,20,240)
   
   strokeWeight(10)
-  fill(0,250,0,50)
+  fill(25,67,80,50)
   touchPoint1.draw = function() { circle(p1X,p1Y,30) }
   touchPoint2.draw = function() { circle(p2X,p2Y,30) }
   touchPoint3.draw = function() { circle(p3X,p3Y,30) }
@@ -198,11 +198,11 @@ function draw()
  
   textSize(20);
   fill(0, 102, 153);
-  text("("+p1X+" , "+p1Y+")",p1X+20,p1Y);
+  text("("+p1X+", "+p1Y+")",p1X+20,p1Y);
 
-  text("("+p2X+" , "+p2Y+")",p2X-120,p2Y);
+  text("("+p2X+", "+p2Y+")",p2X-120,p2Y);
 
-  text("("+p3X+" , "+p3Y+")",p3X-50,p3Y-20);
+  text("("+p3X+", "+p3Y+")",p3X-50,p3Y-20);
 
   drawSprites();
   
