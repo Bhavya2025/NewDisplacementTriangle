@@ -135,10 +135,12 @@ function math()
   
   var areaAvgX = ((p1X+p2X+p3X)/3)
   var areaAvgY = ((p1Y+p2Y+p3Y)/3)
-
+  textSize(25)
   text(area,areaAvgX,areaAvgY); 
   textSize(20)
-  text("(Heron's Formula)",areaAvgX-50,areaAvgY+20); 
+  text("AREA",areaAvgX+10,areaAvgY-30); 
+  textSize(15)
+  text("(Heron's Formula)",areaAvgX-25,areaAvgY+20); 
 
 }
 
