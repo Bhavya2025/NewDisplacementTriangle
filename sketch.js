@@ -105,38 +105,42 @@ function makeTri()
 function math()
 {
   //Finding Length of sides
-  var cord1 = int(sqrt(sq((p2X-p1X))+sq((p2Y-p1Y))))
-  var cord2 = int(sqrt(sq((p3X-p2X))+sq((p3Y-p2Y))))
-  var cord3 = int(sqrt(sq((p3X-p1X))+sq((p3Y-p1Y))))
+  var cord1 = (sqrt(sq((p2X-p1X))+sq((p2Y-p1Y))))
+  var cord2 = (sqrt(sq((p3X-p2X))+sq((p3Y-p2Y))))
+  var cord3 = (sqrt(sq((p3X-p1X))+sq((p3Y-p1Y))))
   
+  cord1.toFixed(2);
+  cord2.toFixed(2);
+  cord3.toFixed(2);
+
   //finding where to show the label
-  var cord1AvgX = int((p1X+p2X)/2)   
-  var cord1AvgY = int((p1Y+p2Y)/2) 
+  var cord1AvgX = ((p1X+p2X)/2)   
+  var cord1AvgY = ((p1Y+p2Y)/2) 
   
-  var cord2AvgX = int((p3X+p2X)/2)   
-  var cord2AvgY = int((p3Y+p2Y)/2)
+  var cord2AvgX = ((p3X+p2X)/2)   
+  var cord2AvgY = ((p3Y+p2Y)/2)
   
-  var cord3AvgX = int((p3X+p1X)/2)   
-  var cord3AvgY = int((p3Y+p1Y)/2) 
+  var cord3AvgX = ((p3X+p1X)/2)   
+  var cord3AvgY = ((p3Y+p1Y)/2) 
   
   //showing the length in text output
-  text(cord1,cord1AvgX,cord1AvgY+30);
+  text(cord1.toFixed(2),cord1AvgX,cord1AvgY+30);
 
-  text(cord2,cord2AvgX-10,cord2AvgY-20);
+  text(cord2.toFixed(2),cord2AvgX-10,cord2AvgY-20);
 
-  text(cord3,cord3AvgX+10,cord3AvgY);
+  text(cord3.toFixed(2),cord3AvgX+10,cord3AvgY);
  
   //Finding area using heron's formula 
   //1((a+b+c)/2) = s
   //2 sqrt((s*(s-a)*(s-b)*(s-c)))
   
-  var s = int((cord1+cord2+cord3)/2)
-  var area = int(sqrt(s*(s-cord1)*(s-cord2)*(s-cord3)))
+  var s = ((cord1+cord2+cord3)/2)
+  var area = (sqrt(s*(s-cord1)*(s-cord2)*(s-cord3)))
   
   var areaAvgX = ((p1X+p2X+p3X)/3)
   var areaAvgY = ((p1Y+p2Y+p3Y)/3)
   textSize(25)
-  text(area,areaAvgX,areaAvgY); 
+  text(area.toFixed(2),areaAvgX,areaAvgY); 
   textSize(20)
   text("AREA",areaAvgX+10,areaAvgY-30); 
   textSize(15)
